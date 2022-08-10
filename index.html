@@ -3,10 +3,132 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=
+  , initial-scale=1.0"
+    />
     <title>Forms Intro</title>
   </head>
   <body>
     <h1>Forms Introduction</h1>
+    <!-- The form tag indicates that everything between opening and closing is part of the form and can be sent to the database -->
+
+    <form>
+      <!-- label and form are inline elements -->
+      <!-- fieldset uses a border to surround a group of Information
+      LEGEND gives a title to that grouping -->
+      <fieldset>
+        <legend><strong>Gather Basic Information</strong></legend>
+        <p>
+          <!-- label for attribute and input id attribute must match. when clicking on the label, the cursor will blink in the input box -->
+          <label for="fname">First Name: </label>
+          <input id="fname" type="text" name="fname" placeholder="First Name" />
+        </p>
+        <p>
+          <label for="lname">Last Name: </label>
+          <input id="lname" type="text" name="lname" placeholder="Last Name" />
+        </p>
+        <p>
+          <label for="phone">*Phone Number: </label>
+          <input
+            id="phone"
+            type="tel"
+            name="phone"
+            placeholder="222-222-2222"
+            required
+          />
+        </p>
+        <!-- When clicking the submit button, the page will automatically re-render -->
+      </fieldset >
+      <fieldset>
+        <legend>Create Your Password</legend>
+        <p>
+          <label for="pass1">Password: </label>
+          <input type="password" id="pass1" name="pass1" required />
+        </p>
+        <p>
+          <label for="pass2">Confirm Password: </label>
+          <input type="password" id="pass2" name="pass2" required />
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Give Us Your Email and the Date You Want to Reserve</legend>
+        <p>
+          <label for="email">Email: </label>
+          <input type="email" id="email" name="email" required />
+        </p>
+        <p>
+          <label for="date">Reservation Date: </label>
+          <input type="date" id="date" name="date" />
+        </p>
+      </fieldset>
+      <!-- The name attribute for radio buttons must be the same for the buttons to be associated -->
+      <!-- The radio button must be given a value attribute based on the input in order to send that information to the database -->
+      <fieldset>
+        <legend>Radio Buttons</legend>
+        <h3>Are you a Day Person or a Night Person</h3>
+        Day
+        <input
+          type="radio"
+          id="day"
+          name="pickTwo"
+          value="
+        day"
+          checked
+        />
+        Night
+        <input type="radio" id="night" name="pickTwo" value="night" />
+      </fieldset>
+      <fieldset>
+        <legend>Checkboxes</legend>
+        <h3>Which of these foods do you like? ( choose all that apply)</h3>
+        <input
+          type="checkbox"
+          id="cereal"
+          name="cereal"
+          value="cereal"
+        />&nbsp;Cereal<br />
+        <input
+          type="checkbox"
+          id="steak"
+          name="steak"
+          value="steak"
+        />&nbsp;Steak<br />
+        <input
+          type="checkbox"
+          id="waffles"
+          name="waffles"
+          value="waffles"
+        />&nbsp;Waffles<br />
+        <input
+          type="checkbox"
+          id="lobster"
+          name="lobster"
+          value="lobster"
+        />&nbsp;Lobster<br />
+      </fieldset>
+      <fieldset>
+        <legend>Dropdown</legend>
+        <h3>Where Do You Want To Go On Vacation?</h3>
+        <select name="vactions" id="vacations">
+          <option>--Please choose on of the following</option>
+          <option value="alaska">Alaska</option>
+          <option value="borabora">Bora Bora</option>
+          <option value="cancun">Cancun</option>
+          <option value="hawaii">Hawaii</option>
+          <option value="tulum">Tulum</option>
+        </select>
+      </fieldset>
+      <!-- Textarea gives 2 new attributes, rows and cols which is columns -->
+      <fieldset>
+        <legend>Please tell us how we did</legend>
+        <textarea name="comment" id="comment" cols="50" rows="20"></textarea>
+      </fieldset>
+      <br />
+      <!-- The disabled attribute auto evaluates to true and does not need '='. You can use JS to change it -->
+      <button type="submit" disabled >Submit</button>
+      <br /><br /><br />
+    </form>
   </body>
 </html>
